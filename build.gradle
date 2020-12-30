@@ -67,12 +67,6 @@ def dependModule(moduleName, fapiVersion, include = true) {
 }
 
 def depend(str, include = true) {
-    dependencies.modRuntime(str) {
-        exclude(module: "fabric-biomes-v1")
-    }
-    dependencies.modCompileOnly(str) {
-        exclude(module: "fabric-biomes-v1")
-    }
     if (include)
         dependencies.include(str)
 }
